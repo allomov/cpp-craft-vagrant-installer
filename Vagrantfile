@@ -12,6 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'cpp-craft'
   config.vm.box_url = 'https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-20131029-i686.box'
 
+  config.vm.synced_folder "./cpp-craft", "/home/vagrant/cpp-craft", mount_options: ["dmode=755", "fmode=755"]
+
   config.vm.provider :virtualbox do |vb|
     vb.customize ['modifyvm', :id, '--memory', VM_MEMORY]
     vb.customize ['modifyvm', :id, '--cpus',   VM_CORES]

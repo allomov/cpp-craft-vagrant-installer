@@ -12,10 +12,15 @@ Installation
 ---
 After you installed Vagrant and VirtualBox go project folder and run commands
 ```
-git submodule add <git-repo-url> cpp-craft
+git submodule add -f <cpp-craft-git-repo-url> cpp-craft
 vagran up
 ```
+Notes:
+- `<cpp-craft-git-repo-url>` is link to your fork of cpp craft repo (for instance in my case it is `git@github.com:allomov/cpp_craft_0314.git`).
+- you can use `VM_MEMORY` and `VM_CORES` variables in [Vagrantfile](https://github.com/allomov/cpp-craft-vagrant-installer/blob/master/Vagrantfile) to adopt project to your hardware.
 
 Usage
 ---
+After `vagran up` was finished without errors you can run `vagrant ssh` to log in to the virtual machine. You'll have your project in `~/cpp-craft` folder. After you've made all changes you can login VM, go to `cpp-craft` folder in your repo and push it to github.
 
+Enjoy your code!
