@@ -1,2 +1,5 @@
 .vagrant
+.gitmodules
+cpp_craft
+cpp-craft
 tmp
